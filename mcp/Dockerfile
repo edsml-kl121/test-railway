@@ -5,9 +5,7 @@ WORKDIR /app
 
 COPY requirements.txt ./
 RUN python -m pip install --no-cache-dir -r requirements.txt
-
-COPY backend/ ./backend/
-COPY frontend/ ./frontend/
+COPY server.py ./
 
 USER 10001:10001
-CMD ["sh", "-c", "exec python -m uvicorn backend.main:app --host 0.0.0.0 --port \"${PORT:-3000}\""]
+CMD ["sh", "-c", "exec python -m uvicorn server:app --host \"${HOST:-0.0.0.0}\" --port \"${PORT:-8001}\""]

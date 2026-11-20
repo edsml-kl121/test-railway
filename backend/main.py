@@ -1,11 +1,7 @@
-from pathlib import Path
-
 from fastapi import FastAPI, Response
 from fastapi.responses import JSONResponse
-from fastapi.staticfiles import StaticFiles
 
 app = FastAPI(title="Mew starter railway")
-frontend_dir = Path(__file__).resolve().parent.parent / "frontend"
 
 
 @app.head("/health", include_in_schema=False)
@@ -27,6 +23,3 @@ async def greet(response: Response, name: str = "") -> dict[str, str] | JSONResp
 
     response.headers["Cache-Control"] = "no-store"
     return {"message": f"Hello, {name}!"}
-
-
-app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
