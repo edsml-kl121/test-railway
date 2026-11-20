@@ -1,4 +1,4 @@
-# Railway Starter
+# Mew starter railway
 
 A small frontend and FastAPI backend served by one Railway service. The form calls the API on the same domain and displays the greeting returned by the server. The app needs no database or secrets.
 

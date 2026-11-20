@@ -4,7 +4,7 @@ from fastapi import FastAPI, Response
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-app = FastAPI(title="Railway Starter")
+app = FastAPI(title="Mew starter railway")
 frontend_dir = Path(__file__).resolve().parent.parent / "frontend"
 
 
