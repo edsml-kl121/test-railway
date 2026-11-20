@@ -1,0 +1,8 @@
+*
+!requirements.txt
+!backend/
+!backend/main.py
+!frontend/
+!frontend/index.html
+!frontend/styles.css
+!frontend/app.js
